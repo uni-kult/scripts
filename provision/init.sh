@@ -1,5 +1,4 @@
-set -euf -o pipefail
-set -x
+set -eufx -o pipefail
 
 # PVE Setup
 # ubuntu-24.04.1-live-server-amd64.iso
