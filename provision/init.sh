@@ -21,7 +21,7 @@ set -x
 
 
 export DEBIAN_FRONTEND=noninteractive
-apt-get update && apt-get dist-upgrade
+apt-get update
 DEBIAN_FRONTEND=noninteractive apt-get install -y git sudo curl wget zstd
 
 
