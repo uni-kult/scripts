@@ -1,6 +1,14 @@
 set -euf -o pipefail
 set -x
 
+# PVE Setup
+# ubuntu-24.04.1-live-server-amd64.iso
+# minimized
+# mirror: http://ubuntu.mirror.lrz.de/ubuntu/
+# install ssh, but no other apps
+
+
+# Initial Commands
 # apt-get update
 # apt-get install -y git sudo
 # git clone --quiet https://github.com/uni-kult/scripts /scripts
