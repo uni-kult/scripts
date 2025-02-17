@@ -35,7 +35,7 @@ bash dotfiles/install.sh
 #echo -e "root:${password}\nunikult:${password}" | tee ~/password | chpasswd
 #set -x
 #echo "" > /etc/motd
-#rm -f /etc/update-motd.d/10-uname
+rm -f /etc/update-motd.d/00-header /etc/update-motd.d/10-help-text /etc/update-motd.d/60-unminimize
 #sudo -u unikult touch .hushlogin 
 
 
