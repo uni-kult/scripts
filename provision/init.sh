@@ -16,7 +16,7 @@ set -eufx -o pipefail
 # ###### echo "unikult  ALL=NOPASSWD: ALL" | sudo tee -a /etc/sudoers
 
 # sudo git clone --quiet https://github.com/uni-kult/scripts /scripts
-# sudo chown -R unikult:unikult  /scripts
+# chown -R $username:$username  /scripts
 # sudo bash /scripts/provision/init.sh
 
 
