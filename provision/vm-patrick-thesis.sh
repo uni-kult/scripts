@@ -43,7 +43,7 @@ sudo systemctl restart code-server@patrick
 sudo tailscale serve --bg 8080
 
 
-DEBIAN_FRONTEND=noninteractive sudo apt-get install -y perl wget
+DEBIAN_FRONTEND=noninteractive sudo apt-get install -y perl wget build-essential
 wget -qO- "https://yihui.org/tinytex/install-bin-unix.sh" | sudo -u patrick sh
 echo 'export PATH="$HOME/bin:$PATH"' >> /home/patrick/.bashrc 
 cd /home/patrick
