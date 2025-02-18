@@ -43,11 +43,16 @@ sudo systemctl restart code-server@patrick
 sudo tailscale serve --bg 8080
 
 
-DEBIAN_FRONTEND=noninteractive sudo apt-get install -y perl wget build-essential
+DEBIAN_FRONTEND=noninteractive sudo apt-get install -y perl wget build-essential fd-find
 wget -qO- "https://yihui.org/tinytex/install-bin-unix.sh" | sudo -u patrick sh
 echo 'export PATH="$HOME/bin:$PATH"' >> /home/patrick/.bashrc 
 cd /home/patrick
 sudo -u patrick /home/patrick/bin/tlmgr install babel-english babel-german german hyphen-german hyphen-english koma-script setspace parskip fancyhdr appendix placeins cite emptypage csquotes microtype csvsimple pgf sidecap mhchem was siunitx caption titlesec floatrow minted upquote lineno oberdiek ulem datetime2 datetime2-german datetime2-english ragged2e latexindent draftwatermark nth
+#echo "yes" | sudo cpan App::latexindent
+sudo apt install perl
+sudo cpan -i App::cpanminus
+sudo cpanm YAML::Tiny
+sudo cpanm File::HomeDir
 
 
 echo "the rest of this script is not working :("
