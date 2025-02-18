@@ -21,7 +21,7 @@ set -eufx -o pipefail
 
 export DEBIAN_FRONTEND=noninteractive
 apt-get update
-DEBIAN_FRONTEND=noninteractive apt-get install -y git sudo curl wget zstd
+DEBIAN_FRONTEND=noninteractive apt-get install -y git sudo curl wget zstd mosh
 
 
 # setup dotfiles
