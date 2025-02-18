@@ -47,9 +47,7 @@ DEBIAN_FRONTEND=noninteractive sudo apt-get install -y perl wget
 wget -qO- "https://yihui.org/tinytex/install-bin-unix.sh" | sudo -u patrick sh
 echo 'export PATH="$HOME/bin:$PATH"' >> /home/patrick/.bashrc 
 cd /home/patrick
-sudo -u patrick /home/patrick/bin/tlmgr install babel-english babel-german german hyphen-german hyphen-english koma-script setspace parskip fancyhdr appendix placeins cite emptypage csqu
-otes microtype csvsimple pgf sidecap mhchem was siunitx caption titlesec floatrow minted upquote lineno oberdiek ulem datetime2 datetime2-german datetime2-english ragged2e
-
+sudo -u patrick /home/patrick/bin/tlmgr install babel-english babel-german german hyphen-german hyphen-english koma-script setspace parskip fancyhdr appendix placeins cite emptypage csquotes microtype csvsimple pgf sidecap mhchem was siunitx caption titlesec floatrow minted upquote lineno oberdiek ulem datetime2 datetime2-german datetime2-english ragged2e latexindent draftwatermark nth
 
 
 echo "the rest of this script is not working :("
