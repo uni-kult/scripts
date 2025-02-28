@@ -47,8 +47,8 @@ bash dotfiles/.bin/update
 bash dotfiles/Install.Software/locale.sh
 bash dotfiles/Install.Software/ufw.sh
 bash dotfiles/Install.Software/fail2ban.sh
-#bash dotfiles/Install.Software/basic-tools.sh
-#bash dotfiles/Install.Software/security-hardening.sh
+bash dotfiles/Install.Software/basic-tools.sh
+bash dotfiles/Install.Software/security-hardening.sh
 bash dotfiles/Install.Software/docker.sh
 sudo usermod -aG docker $username
 #sudo -u $username newgrp docker #apply group information now
