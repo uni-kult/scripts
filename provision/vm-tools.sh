@@ -1,4 +1,9 @@
 set -eufx -o pipefail
 
-# Install docker container for permanent tools and services
+sudo git clone --quiet https://github.com/uni-kult/config-tools /config
+sudo chown -R unikult:unikult  /config
+
+bash dotfiles/Install.Software/caddy.sh
+sudo mv /etc/caddy/Caddyfile /etc/caddy/Caddyfile.old
+sudo ln -s /config/Caddyfile /etc/caddy/Caddyfile
 
