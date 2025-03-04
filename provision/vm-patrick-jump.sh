@@ -14,5 +14,10 @@ sudo chmod 755 /etc/networkd-dispatcher/routable.d/50-tailscale
 sudo /etc/networkd-dispatcher/routable.d/50-tailscale
 test $? -eq 0 || echo 'An error occurred.'
 
+sudo ufw allow 41641/udp
+sudo ufw allow in on tailscale0
+sudo ufw reload
+
+
 sudo tailscale up --advertise-routes=172.16.81.0/24 --ssh --advertise-exit-node
 
