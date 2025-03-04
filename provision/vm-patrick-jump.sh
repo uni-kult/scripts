@@ -1,6 +1,10 @@
 set -eufx -o pipefail
 
 curl -fsSL https://tailscale.com/install.sh | sh
+sudo tailscale set --auto-update
+
+
+
 
 echo 'net.ipv4.ip_forward = 1' | sudo tee -a /etc/sysctl.d/99-tailscale.conf
 echo 'net.ipv6.conf.all.forwarding = 1' | sudo tee -a /etc/sysctl.d/99-tailscale.conf
@@ -16,6 +20,12 @@ test $? -eq 0 || echo 'An error occurred.'
 
 sudo ufw allow 41641/udp
 sudo ufw allow in on tailscale0
+sudo ufw allow from 172.16.81.0/24 to any port ssh
+sudo ufw delete allow ssh
+sudo ufw delete limit ssh
+sudo ufw delete allow mosh
+sudo ufw delete allow http
+sudo ufw delete allow https
 sudo ufw reload
 
 
