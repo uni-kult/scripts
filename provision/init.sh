@@ -53,6 +53,10 @@ bash dotfiles/Install.Software/docker.sh
 sudo usermod -aG docker $username
 #sudo -u $username newgrp docker #apply group information now
 
+sudo apt install -y qemu-guest-agent
+sudo systemctl start qemu-guest-agent
+#sudo systemctl enable qemu-guest-agent
+
 
 mkdir /src
 chown -R $username:$username  /src
