@@ -54,6 +54,7 @@ sudo usermod -aG docker $username
 #sudo -u $username newgrp docker #apply group information now
 
 sudo apt install -y qemu-guest-agent
+#echo -e "\n[Install]\nWantedBy=multi-user.target" | sudo tee -a  /usr/lib/systemd/system/qemu-guest-agent.service
 sudo systemctl start qemu-guest-agent
 #sudo systemctl enable qemu-guest-agent
 
